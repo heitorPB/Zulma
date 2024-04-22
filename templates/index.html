@@ -66,6 +66,9 @@
         {% endif %}
         <!-- END HERO TITLE -->
         <div class="container">
+            {% block extra_content %}
+            {% endblock extra_content %}
+
             <!-- START ARTICLE FEED -->
             {% if paginator %}
             {{ index_macros::list_articles(pages=paginator.pages) }}
